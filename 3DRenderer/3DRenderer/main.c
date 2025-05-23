@@ -24,17 +24,29 @@ int main(int argc, char* argv[])
 		return 2;
 	}
 
-	pixelAtPoint first = { 
+	pixelAtPoint firstA = { 
 		.pixel = { 255, 0, 0, 255 },
 		.pos = { 100, 100 }
 	};
 
-	pixelAtPoint second = {
+	pixelAtPoint secondA = {
 		.pixel = { 0, 0, 255, 255 },
 		.pos = { 300, 300 }
 	};
 
-	drawInterpolatedLine(first, second);
+	drawInterpolatedLine(firstA, secondA);
+
+	pixelAtPoint firstB = {
+	.pixel = { 255, 0, 0, 255 },
+	.pos = { 300, 100 }
+	};
+
+	pixelAtPoint secondB = {
+		.pixel = { 0, 0, 255, 255 },
+		.pos = { 100, 300 }
+	};
+
+	drawInterpolatedLine(secondB, firstB);
 
 	while (running)
 	{
