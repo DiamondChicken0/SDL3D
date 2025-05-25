@@ -19,7 +19,8 @@ typedef struct {
 } node3D;
 
 typedef struct {
-	node3D* next;
+	pixelAtPoint* val;
+	Polygon* next;
 } Polygon;
 
 typedef struct {

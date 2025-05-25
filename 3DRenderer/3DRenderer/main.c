@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
 
 	pixelAtPoint firstA = { 
 		.pixel = { 0, 0, 255, 255 },
-		.pos = { 100, 100 }
+		.pos = { 200, 200 }
 	};
 
 	pixelAtPoint secondA = {

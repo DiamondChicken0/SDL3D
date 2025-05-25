@@ -40,6 +40,30 @@ void drawInterpolatedLine(pixelAtPoint a, pixelAtPoint b)
 	}
 	else
 	{
+		if (a.pos[1] <= b.pos[1])
+		{
+			startY = a.pos[1];
+			endY = b.pos[1];
+			startColor = a.pixel;
+			endColor = b.pixel;
+		}
+		else
+		{
+			startY = b.pos[1];
+			endY = a.pos[1];
+			startColor = b.pixel;
+			endColor = a.pixel;
+		}
+
+		int length = endY - startY;
+		for (int i = startY; i <= endY; i++)
+		{
+			SDL_Color finalPixel = PixelAdd(
+				ScalarMultPixel(startColor, (float) (endY - i)/length),
+				ScalarMultPixel(endColor, (float)(i - startY) / length));
+			printf("Considering %f of pixel A and %f of pixel B\n", (float)(startY - i) / length, (float)(i - startY) / length);
+			pixels[(int)round(slope * i)][i] = finalPixel;
+		}
 
 	}
 
