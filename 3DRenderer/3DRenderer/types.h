@@ -18,9 +18,9 @@ typedef struct {
 	pixelAtPoint point;
 } node3D;
 
-typedef struct {
+typedef struct Polygon {
 	pixelAtPoint* val;
-	Polygon* next;
+	struct Polygon* next;
 } Polygon;
 
 typedef struct {

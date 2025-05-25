@@ -48,6 +48,20 @@ int main(int argc, char* argv[])
 
 	drawInterpolatedLine(firstB, secondB);
 
+	Polygon testPolyA;
+	testPolyA.val = &firstA;
+	
+	Polygon testPolyB;
+	testPolyB.val = &secondA;
+
+	Polygon testPolyC;
+	testPolyC.val = &firstB;
+
+	testPolyA.next = &testPolyB;
+	testPolyB.next = &testPolyC;
+
+	drawUnfilledPolygon(testPolyA);
+	
 	while (running)
 	{
 		SDL_Event event;

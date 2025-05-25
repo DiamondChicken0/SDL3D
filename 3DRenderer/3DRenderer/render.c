@@ -2,9 +2,10 @@
 #include "render.h"
 
 
-void drawInterpolatedLine(pixelAtPoint a, pixelAtPoint b)
+void drawInterpolatedLine(pixelAtPoint *a, pixelAtPoint *b)
 {
-	float slope = (a.pos[1] - b.pos[1]) / (a.pos[0] - b.pos[0]);
+	
+	float slope = (a->pos[1] - b->pos[1]) / (a->pos[0] - b->pos[0]);
 	int startX;
 	int startY;
 	int endX;
@@ -14,19 +15,19 @@ void drawInterpolatedLine(pixelAtPoint a, pixelAtPoint b)
 	
 	if (abs(slope) <= 1)
 	{
-		if (a.pos[0] <= b.pos[0])
+		if (a->pos[0] <= b->pos[0])
 		{
-			startX = a.pos[0];
-			endX = b.pos[0];
-			startColor = a.pixel;
-			endColor = b.pixel;
+			startX = a->pos[0];
+			endX = b->pos[0];
+			startColor = a->pixel;
+			endColor = b->pixel;
 		}
 		else
 		{
-			startX = b.pos[0];
-			endX = a.pos[0];
-			startColor = b.pixel;
-			endColor = a.pixel;
+			startX = b->pos[0];
+			endX = a->pos[0];
+			startColor = b->pixel;
+			endColor = a->pixel;
 		}
 		int length = endX - startX;
 		for (int i = startX; i <= endX; i++)
@@ -40,19 +41,19 @@ void drawInterpolatedLine(pixelAtPoint a, pixelAtPoint b)
 	}
 	else
 	{
-		if (a.pos[1] <= b.pos[1])
+		if (a->pos[1] <= b->pos[1])
 		{
-			startY = a.pos[1];
-			endY = b.pos[1];
-			startColor = a.pixel;
-			endColor = b.pixel;
+			startY = a->pos[1];
+			endY = b->pos[1];
+			startColor = a->pixel;
+			endColor = b->pixel;
 		}
 		else
 		{
-			startY = b.pos[1];
-			endY = a.pos[1];
-			startColor = b.pixel;
-			endColor = a.pixel;
+			startY = b->pos[1];
+			endY = a->pos[1];
+			startColor = b->pixel;
+			endColor = a->pixel;
 		}
 
 		int length = endY - startY;
@@ -69,7 +70,23 @@ void drawInterpolatedLine(pixelAtPoint a, pixelAtPoint b)
 
 }
 
-void drawPolygon(Polygon poly)
+void drawUnfilledPolygon(Polygon poly)
+{
+	pixelAtPoint *startPixel = poly.val;
+	pixelAtPoint *currPixel = startPixel;
+
+	Polygon polyIter = poly;
+
+	while (poly.next)
+	{
+		drawInterpolatedLine(currPixel, poly.next->val);
+		currPixel = polyIter.next;
+	}
+	drawInterpolatedLine(currPixel, startPixel);
+
+}
+
+void drawFilledPolygon(Polygon poly)
 {
 
 }
