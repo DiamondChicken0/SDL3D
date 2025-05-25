@@ -13,5 +13,6 @@
 #include "map.h"
 #include "keyinput.h"
 #include "render.h"
+#include "math.h"
 
 #endif 

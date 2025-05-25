@@ -135,12 +135,14 @@
     <ClCompile Include="keyinput.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="map.c" />
+    <ClCompile Include="math.c" />
     <ClCompile Include="render.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="keyinput.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="map.h" />
+    <ClInclude Include="math.h" />
     <ClInclude Include="render.h" />
     <ClInclude Include="types.h" />
   </ItemGroup>
