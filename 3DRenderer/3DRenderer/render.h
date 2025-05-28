@@ -5,7 +5,12 @@
 #ifndef RENDER_H
 #define RENDER_H
 
-void drawInterpolatedLine(pixelAtPoint a, pixelAtPoint b);
-void drawPolygon(Polygon poly);
+SDL_Color pixelBuffer[WIDTH][HEIGHT];
 
-#endif MAP_H
+void drawInterpolatedLine(pixelAtPoint *a, pixelAtPoint *b);
+void drawUnfilledPolygon(struct Polygon *poly);
+void drawFilledPolygon(struct Polygon* poly);
+void drawBufferToScreen();
+void clearPixelBuffer();
+
+#endif RENDER_H

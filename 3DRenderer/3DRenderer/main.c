@@ -25,20 +25,20 @@ int main(int argc, char* argv[])
 	}
 
 	pixelAtPoint firstA = { 
-		.pixel = { 0, 0, 255, 255 },
+		.pixel = {255, 0, 0, 255 },
 		.pos = { 200, 200 }
 	};
 
 	pixelAtPoint secondA = {
-		.pixel = { 255, 0, 0, 255 },
-		.pos = { 300, 300 }
+		.pixel = { 0, 255, 0, 255 },
+		.pos = { 250, 300 }
 	};
 
-	drawInterpolatedLine(firstA, secondA);
+	//drawInterpolatedLine(firstA, secondA);
 
 	pixelAtPoint firstB = {
-	.pixel = { 255, 0, 0, 255 },
-	.pos = { 100, 300 }
+	.pixel = { 0, 0, 255, 255 },
+	.pos = { 150, 300 }
 	};
 
 	pixelAtPoint secondB = {
@@ -46,7 +46,7 @@ int main(int argc, char* argv[])
 		.pos = { 300, 100 }
 	};
 
-	drawInterpolatedLine(firstB, secondB);
+	//drawInterpolatedLine(firstB, secondB);
 
 	Polygon testPolyA;
 	testPolyA.val = &firstA;
@@ -59,8 +59,23 @@ int main(int argc, char* argv[])
 
 	testPolyA.next = &testPolyB;
 	testPolyB.next = &testPolyC;
+	testPolyC.next = NULL;
 
-	drawUnfilledPolygon(testPolyA);
+	clearPixelBuffer();
+
+	/*pixelAtPoint testA = {
+	.pixel = { 0, 0, 255, 255 },
+	.pos = { 100, 250 }
+	};
+	pixelAtPoint testB = {
+		.pixel = { 0, 0, 255, 255 },
+		.pos = { 100, 300 }
+	};*/
+
+	//drawInterpolatedLine(&testA, &testB);
+	drawFilledPolygon(&testPolyA);
+	drawBufferToScreen();
+
 	
 	while (running)
 	{
