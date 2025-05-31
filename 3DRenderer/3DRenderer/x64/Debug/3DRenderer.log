@@ -1,5 +1,25 @@
-﻿  render.c
-C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\types.h(35,2): warning C4091: 'typedef ': ignored on left of '<unnamed-enum-READING_AREA>' when no variable is declared
+﻿  main.c
+C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\types.h(47,2): warning C4091: 'typedef ': ignored on left of '<unnamed-enum-READING_AREA>' when no variable is declared
+  (compiling source file 'main.c')
+  
+C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\main.c(86,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\main.c(100,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\main.c(143,31): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
+C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\main.c(143,34): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
+  map.c
+C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\types.h(47,2): warning C4091: 'typedef ': ignored on left of '<unnamed-enum-READING_AREA>' when no variable is declared
+  (compiling source file 'map.c')
+  
+  math.c
+C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\types.h(47,2): warning C4091: 'typedef ': ignored on left of '<unnamed-enum-READING_AREA>' when no variable is declared
+  (compiling source file 'math.c')
+  
+C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\math.c(5,27): warning C4244: 'initializing': conversion from 'float' to 'Uint8', possible loss of data
+C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\math.c(5,39): warning C4244: 'initializing': conversion from 'float' to 'Uint8', possible loss of data
+C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\math.c(5,51): warning C4244: 'initializing': conversion from 'float' to 'Uint8', possible loss of data
+C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\math.c(5,63): warning C4244: 'initializing': conversion from 'float' to 'Uint8', possible loss of data
+  render.c
+C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\types.h(47,2): warning C4091: 'typedef ': ignored on left of '<unnamed-enum-READING_AREA>' when no variable is declared
   (compiling source file 'render.c')
   
 C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\render.c(47,19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
@@ -25,4 +45,7 @@ C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\render.c(201,16): warning C4244
 C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\render.c(201,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
 C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\render.c(210,16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
 C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\render.c(210,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\map.c(76,1): warning C4715: 'loadMap': not all control paths return a value
+C:\Users\ogore\Repos\SDL3D\3DRenderer\3DRenderer\main.c(151,1): warning C4715: 'SDL_main': not all control paths return a value
   3DRenderer.vcxproj -> C:\Users\ogore\Repos\SDL3D\3DRenderer\x64\Debug\3DRenderer.exe

@@ -77,6 +77,34 @@ int main(int argc, char* argv[])
 	drawBufferToScreen();
 
 	
+	matrix matrixA = (matrix){
+		.data = malloc(16 * sizeof(float)),
+		.columns = 4,
+		.rows = 4
+	};
+	for (int i = 0; i < 16; i++)
+		matrixA.data[i] = i;
+	//printMatrix(&matrixA);
+
+	matrixScalarMult(&matrixA, 2);
+	
+	printMatrix(&matrixA);
+
+	matrix matrixColA = (matrix){
+		.data = malloc(4 * sizeof(float)),
+		.columns = 1,
+		.rows = 4
+	};
+
+	for (int i = 0; i < 4; i++)
+		matrixColA.data[i] = i;
+
+
+	matrix result;
+	matrixMultByColVector(&matrixColA, &matrixA, &result);
+	printMatrix(&result);
+
+
 	while (running)
 	{
 		SDL_Event event;

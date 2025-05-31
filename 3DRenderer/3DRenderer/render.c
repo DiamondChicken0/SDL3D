@@ -145,7 +145,7 @@ void drawInterpolatedLine(pixelAtPoint *a, pixelAtPoint *b)
 		}
 
 	}
-	printf("Drew a line from (%f, %f) to (%f, %f) with slope of %f\n", a->pos[0], a->pos[1], b->pos[0], b->pos[1], slope);
+	//printf("Drew a line from (%f, %f) to (%f, %f) with slope of %f\n", a->pos[0], a->pos[1], b->pos[0], b->pos[1], slope);
 
 }
 
@@ -227,7 +227,7 @@ void drawFilledPolygon(struct Polygon *poly)
 					iter->next = nextPair;
 					insidePoly = !insidePoly;
 
-					printf("Created new pair\n");
+					//printf("Created new pair\n");
 				}
 			}
 		}
@@ -237,7 +237,7 @@ void drawFilledPolygon(struct Polygon *poly)
 
 	while (iter)
 	{
-		printf("looping %f, %f thru %f, %f\n", iter->a.pos[0], iter->a.pos[1], iter->b.pos[0], iter->b.pos[1]);
+		//printf("looping %f, %f thru %f, %f\n", iter->a.pos[0], iter->a.pos[1], iter->b.pos[0], iter->b.pos[1]);
 		drawInterpolatedLine(&iter->a, &iter->b);
 		iter = iter->next;
 	}

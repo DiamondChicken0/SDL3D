@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\ogore\source\repos\SDLTest\x64\Release\SDL3.dll</FullPath>
+      <FullPath>C:\Users\ogore\Repos\SDL3D\3DRenderer\x64\Release\SDL3.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

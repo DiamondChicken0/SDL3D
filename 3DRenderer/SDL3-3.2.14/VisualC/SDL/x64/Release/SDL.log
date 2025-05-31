@@ -38,6 +38,12 @@
   SDL_hid.c
   SDL_immdevice.c
   SDL_windows.c
+C:\Users\ogore\Repos\SDL3D\3DRenderer\SDL3-3.2.14\src\render\vulkan\SDL_render_vulkan.c(3766,10): warning C5286: implicit conversion from enum type 'VkFilter' to enum type 'SDL_ScaleMode'; use an explicit cast to silence this warning
+  (compiling source file '/src/render/vulkan/SDL_render_vulkan.c')
+  
+C:\Users\ogore\Repos\SDL3D\3DRenderer\SDL3-3.2.14\src\render\vulkan\SDL_render_vulkan.c(3778,10): warning C5286: implicit conversion from enum type 'VkFilter' to enum type 'SDL_ScaleMode'; use an explicit cast to silence this warning
+  (compiling source file '/src/render/vulkan/SDL_render_vulkan.c')
+  
   SDL_xinput.c
   SDL_cpuinfo.c
   SDL_windowsdialog.c
@@ -78,12 +84,6 @@
   SDL_hidapi_steam_hori.c
   SDL_hidapi_steamdeck.c
   SDL_hidapi_switch.c
-C:\Users\ogore\Downloads\SDL3-3.2.14\SDL3-3.2.14\src\render\vulkan\SDL_render_vulkan.c(3766,10): warning C5286: implicit conversion from enum type 'VkFilter' to enum type 'SDL_ScaleMode'; use an explicit cast to silence this warning
-  (compiling source file '/src/render/vulkan/SDL_render_vulkan.c')
-  
-C:\Users\ogore\Downloads\SDL3-3.2.14\SDL3-3.2.14\src\render\vulkan\SDL_render_vulkan.c(3778,10): warning C5286: implicit conversion from enum type 'VkFilter' to enum type 'SDL_ScaleMode'; use an explicit cast to silence this warning
-  (compiling source file '/src/render/vulkan/SDL_render_vulkan.c')
-  
   SDL_hidapi_wii.c
   SDL_hidapi_xbox360.c
   SDL_hidapi_xbox360w.c
@@ -228,5 +228,5 @@ C:\Users\ogore\Downloads\SDL3-3.2.14\SDL3-3.2.14\src\render\vulkan\SDL_render_vu
   yuv_rgb_sse.c
   yuv_rgb_std.c
   SDL_dynapi.c
-     Creating library C:\Users\ogore\source\repos\SDLTest\x64\Release\SDL3.lib and object C:\Users\ogore\source\repos\SDLTest\x64\Release\SDL3.exp
-  SDL.vcxproj -> C:\Users\ogore\source\repos\SDLTest\x64\Release\SDL3.dll
+     Creating library C:\Users\ogore\Repos\SDL3D\3DRenderer\x64\Release\SDL3.lib and object C:\Users\ogore\Repos\SDL3D\3DRenderer\x64\Release\SDL3.exp
+  SDL.vcxproj -> C:\Users\ogore\Repos\SDL3D\3DRenderer\x64\Release\SDL3.dll
